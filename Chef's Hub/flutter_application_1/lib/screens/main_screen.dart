@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/screens/browse.dart';
+import 'package:flutter_application_1/screens/community_screen.dart';
 import 'package:flutter_application_1/screens/home_screen.dart';
+import 'package:flutter_application_1/screens/profile_screen.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MainScreen extends StatefulWidget {
@@ -12,13 +15,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int currentTab = 0;
-  List screens = const [
-    HomeScreen(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
-  ];
-   
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,90 +25,70 @@ class _MainScreenState extends State<MainScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GestureDetector(
-              onTap: () => setState(() {
-                currentTab = 0;
-              }),
-              child: Column(
-                children: [
-                  Icon(
-                    currentTab == 0 ? Iconsax.home5 : Iconsax.home,
-                    color: currentTab == 0 ? kprimaryColor : Colors.grey,
-                  ),
-                  Text(
-                    "Home",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: currentTab == 0 ? kprimaryColor : Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () => setState(() {
-                currentTab = 1;
-              }),
-              child: Column(
-                children: [
-                  Icon(
-                    currentTab == 1 ? Iconsax.heart5 : Iconsax.heart,
-                    color: currentTab == 1 ? kprimaryColor : Colors.grey,
-                  ),
-                  Text(
-                    "Favorites",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: currentTab == 1 ? kprimaryColor : Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () => setState(() {
-                currentTab = 2;
-              }),
-              child: Column(
-                children: [
-                  Icon(
-                    currentTab == 2 ? Iconsax.calendar_25 : Iconsax.calendar_2,
-                    color: currentTab == 2 ? kprimaryColor : Colors.grey,
-                  ),
-                  Text(
-                    "Meal Plan",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: currentTab == 2 ? kprimaryColor : Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () => setState(() {
-                currentTab = 3;
-              }),
-              child: Column(
-                children: [
-                  Icon(
-                    currentTab == 3 ? Iconsax.setting5 : Iconsax.setting,
-                    color: currentTab == 3 ? kprimaryColor : Colors.grey,
-                  ),
-                  Text(
-                    "Settings",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: currentTab == 3 ? kprimaryColor : Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            buildNavItem(Iconsax.home_1, "Home", 0),
+            buildNavItem(Iconsax.search_normal, "Browse", 1),
+            buildNavItem(Iconsax.people, "Community", 2),
+            buildNavItem(Iconsax.profile_circle, "Profile", 3),
           ],
         ),
       ),
-      body: screens[currentTab],
+      body: _buildCurrentScreen(),
     );
+  }
+
+  Widget buildNavItem(IconData iconData, String title, int index) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          currentTab = index;
+        });
+        switch (index) {
+          case 0:
+            Navigator.pushNamed(context, '/home');
+            break;
+          case 1:
+            Navigator.pushNamed(context, '/browse');
+            break;
+          case 2:
+            Navigator.pushNamed(context, '/community');
+            break;
+          case 3:
+            Navigator.pushNamed(context, '/profile');
+            break;
+          default:
+            break;
+        }
+      },
+      child: Column(
+        children: [
+          Icon(
+            iconData,
+            color: currentTab == index ? kprimaryColor : Colors.grey,
+          ),
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 14,
+              color: currentTab == index ? kprimaryColor : Colors.grey,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCurrentScreen() {
+    switch (currentTab) {
+      case 0:
+        return Home_Screen();
+      case 1:
+        return browse_screen();
+      case 2:
+        return CommunityScreen();
+      case 3:
+        return ProfileScreen();
+      default:
+        return  Home_Screen(); // Default case, you can return a default screen or empty container
+    }
   }
 }

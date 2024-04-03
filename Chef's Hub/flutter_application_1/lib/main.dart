@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart'; 
+import 'package:firebase_auth/firebase_auth.dart';
+// import 'firebase_options.dart';
 import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/screens/browse.dart';
+import 'package:flutter_application_1/screens/signup_screen.dart';
+import 'package:flutter_application_1/screens/community_screen.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/main_screen.dart';
 import 'package:flutter_application_1/screens/loading_screen.dart';
-import 'package:flutter_application_1/screens/create_account_screen.dart';
-import 'package:flutter_application_1/screens/settings_screen.dart';
-import 'dart:ui';
+import 'package:flutter_application_1/screens/profile_screen.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kbackgroundColor,
         useMaterial3: true,
       ),
-      home: const MainScreen(),
-    );
+      home:   browse_screen(), 
+    ); 
   }
 }

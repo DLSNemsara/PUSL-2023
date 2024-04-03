@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constants.dart';
-import 'package:flutter_application_1/models/category.dart';
-import 'package:flutter_application_1/models/food.dart';
-import 'package:flutter_application_1/widgets/categories.dart';
 import 'package:flutter_application_1/widgets/home_appbar.dart';
 import 'package:flutter_application_1/widgets/home_search_bar.dart';
-import 'package:flutter_application_1/widgets/quick_and_fast_list.dart';
-import 'package:iconsax/iconsax.dart';
+//import 'package:iconsax/iconsax.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Home_Screen extends StatefulWidget {
+  const Home_Screen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Home_Screen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<Home_Screen> {
   String currentCat = "All";
 
   @override
@@ -67,18 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                const Text(
-                  "Categories",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Categories(currentCat: currentCat),
-                const SizedBox(height: 20),
-                const QuickAndFastList(),
+                
               ],
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
+import 'package:flutter_application_1/screens/signup_screen.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -18,16 +19,21 @@ class LoadingScreen extends StatelessWidget {
               width: 150,
               height: 150,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/createAccount');
+                _navigateToNextScreen(context);
+                
               },
-              child: Text('Get Started'),
+              child: const Text('Get Started'),
             ),
           ],
         ),
       ),
     );
+  }
+
+   void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpScreen()));
   }
 }
