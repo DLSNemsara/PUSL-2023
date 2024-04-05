@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "484051238600",
+    "project_id": "appchef12",
+    "storage_bucket": "appchef12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484051238600:android:a55dccfa412f42ad6ceffd",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEh1zJSjvAbf2RN_xPba-__EI0uuQu3jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
