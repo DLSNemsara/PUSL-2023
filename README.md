@@ -34,14 +34,14 @@ We develop application for the Chef's Hub
     
 <img src="https://raw.githubusercontent.com/Maheeshi/PUSL-2023/main/assets/logochefHub.png" alt="Logo" width="300" height="300">
 
-## Related  📌
+## 📌 Related  
 
 Here are some related projects
 
 [Awesome App Project](https://github.com/Maheeshi/PUSL-2023)
 
 
-## Tech Stack ☑️
+## ☑️ Tech Stack 
 
 **Frontend:** Flutter, Dart
 
