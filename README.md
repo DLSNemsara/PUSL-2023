@@ -1,7 +1,7 @@
 # PUSL-2023
 ## Chef's Hub Mobile Application Development
 
-<video width="400" height="300" src="https://github.com/Maheeshi/PUSL-2023/assets/132211856/c8533121-343a-4612-bc90-d1d7ef85bc0c.mp4"></video>
+<video width="200" height="150" src="https://github.com/Maheeshi/PUSL-2023/assets/132211856/c8533121-343a-4612-bc90-d1d7ef85bc0c.mp4"></video>
 
 ### Introductions
 <p>In today's fast-paced world, culinary enthusiasts struggle to find reliable, diverse, and personalized recipes due to inefficient platforms. Many recipe websites and apps lack community and interaction, making users feel isolated and disconnected. Misinformation and unreliable content on these platforms hinder confidence in culinary endeavors.</p> 
@@ -32,19 +32,18 @@ We develop application for the Chef's Hub
 
 ## Application Logo
     
-![Logo](https://raw.githubusercontent.com/Maheeshi/PUSL-2023/main/assets/logochefHub.png)
+<img src="https://raw.githubusercontent.com/Maheeshi/PUSL-2023/main/assets/logochefHub.png" alt="Logo" width="300" height="300">
 
-
-## Related
+## Related  📌
 
 Here are some related projects
 
 [Awesome App Project](https://github.com/Maheeshi/PUSL-2023)
 
 
-## Tech Stack
+## Tech Stack ☑️
 
-**Frontedn:** Flutter, Dart
+**Frontend:** Flutter, Dart
 
 **Backend:** Firestore
 
