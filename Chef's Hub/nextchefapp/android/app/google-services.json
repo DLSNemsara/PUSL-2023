@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "484051238600",
+    "project_id": "appchef12",
+    "storage_bucket": "appchef12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484051238600:android:e7f32ca492628f1d6ceffd",
+        "android_client_info": {
+          "package_name": "com.example.nextchefapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484051238600-6dp3jtk04dncdc25evf4djogjafons6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEh1zJSjvAbf2RN_xPba-__EI0uuQu3jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484051238600-419b7rsk4nn4eeol9q1g50k3nh9tbufv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "484051238600-of5rioo6dl28brmfdahrnhr7007btsdi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.communityApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
