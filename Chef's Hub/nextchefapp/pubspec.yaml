@@ -38,6 +38,7 @@ dependencies:
   firebase_auth: ^4.19.1
   firebase_core: ^2.29.0
   font_awesome_flutter: ^10.7.0
+  url_launcher: ^6.2.6
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/logo.png
     - assets/review.png
     - assets/organizer.png
     - assets/esential.png
