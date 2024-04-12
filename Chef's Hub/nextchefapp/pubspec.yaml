@@ -63,6 +63,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/logo.png
     - assets/review.png
     - assets/organizer.png
     - assets/esential.png
